@@ -231,7 +231,7 @@ static const CGFloat xVideoPlayerAnimationTimeInterval = 0.3f;
 - (void)closeButtonClick
 {
     [self stopDurationTimer];
-    [self xx_VideoPlay];
+    [self xx_VideoPause];
     [UIView animateWithDuration:xVideoPlayerAnimationTimeInterval animations:^{
         self.view.alpha = 0.0;
     } completion:^(BOOL finished) {
@@ -286,13 +286,5 @@ static const CGFloat xVideoPlayerAnimationTimeInterval = 0.3f;
     [self.xVideoPlayerView setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
     [self.xVideoPlayerView setNeedsLayout];
     [self.xVideoPlayerView layoutIfNeeded];
-}
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-- (BOOL)prefersStatusBarHidden
-{
-    return YES;
 }
 @end
