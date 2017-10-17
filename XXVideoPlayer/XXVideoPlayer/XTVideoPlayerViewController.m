@@ -38,6 +38,7 @@ static const CGFloat xVideoPlayerAnimationTimeInterval = 0.3f;
         self.view.frame = frame;
         _avPlayerItem = [[AVPlayerItem alloc] initWithURL:playFormURL];
         self.avPlayer = [[AVPlayer alloc] initWithPlayerItem:_avPlayerItem];
+        self.avPlayer.currentItem.timebase;
         self.playLayer = [AVPlayerLayer playerLayerWithPlayer:self.avPlayer];
         [self.view.layer addSublayer:self.playLayer];
         self.playLayer.frame = self.view.frame;
